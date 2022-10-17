@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div id="reloder"></div>
+    <div id="reloder2"></div>
+    <div>
+        Password: <input type="password" id="myInput"><br><br>
+    
+    <span onclick="myFunction(),setTimeout(myFunction1,1000)"><img src="clock.png" class="img" alt=""></span>
+    </div>
+    <div class="searchcontainer">
+        <input type="text" name="search" id="search" placeholder="Search here..." onkeyup="search()">
+        <div class="myli">
+    <ul id="myul">
+        <li><a href="index2.html">reloder</a></li>
+        <li><a href="">efwf</a></li>
+        <li><a href="">fhwef wefjdsh</a></li>
+        <li><a href="">fhjwe fwefdsh</a></li>
+        <li><a href="">fhj dsh</a></li>
+        <li><a href="">esdv</a></li>
+    </ul>
+    </div>
+    </div>
+    <div class="new">
+        <input type="range" name="range" min="0" max="400" id="range1">
+        </div>
+    <input onclick="myfun()" type="button" value="submit">
+    <span id="sp1"></span>
+    <input type="number" id="sp2">
+    <div class="box">dfdf</div>
+    <input type="file" name="file" id="file" hidden>
+    <span onclick="activefile()" id="file2">click here to chose file</span>
+    <span id="ul"></span>
+    <span id="filename"></span>
+    <script>
+    let file2 = document.getElementById("file2")
+    function activefile() {
+        let file = document.getElementById("file")
+        file.click();
+    }
+    let filename = document.getElementById("filename")
+    filename.innerHTML=fileinfo;
+    let fileinfo = document.getElementById("file").value
+
+    window.onload = document.classList.add = ('reloder');
+    setTimeout(() => {
+             document.classList.remove = ('reloder');
+     }, 2000);
+    
+    // function onPageLoad() {
+    //     document.classList.add = ('reloder');
+    //     setTimeout(() => {
+    //         document.classList.remove = ('reloder');
+    // }, 2000);
+    // }
+    
+    
+    
+    
+        setInterval(function myfun() {
+            let range = document.getElementById("range1").value
+                document.getElementById("sp1").innerHTML=range;
+            document.getElementById("sp2").value=range;
+            
+            },10);
+    let box = document.getElementsByClassName("box")
+            box.style.height='500px'
+        // const range1 = () =>{
+        //     let range = document.getElementById("range1").value
+        //     if (range>0) {
+        //         document.getElementById("sp1").innerHTML=range;
+        //     document.getElementById("sp2").value=range;
+        //     }
+        //     else{
+        //         alert("error")
+        //     }
+            
+        // }
+    
+        
+    
+        const search = () =>{
+    let filter = document.getElementById("search").value.toUpperCase();
+    let ul = document.getElementById("myul")
+    let li = ul.getElementsByTagName("li")
+    
+    for (let i = 0; i < li.length; i++) {
+        let a = li[i].getElementsByTagName('a')[0];
+        let text = a.textContent || a.innerHTML;
+    
+        if (text.toUpperCase().indexOf(filter) > -1) {
+            li[i].style.display='';
+        }
+        else {
+            li[i].style.display='none';
+        }
+        
+    }
+        }
+    </script>
+</body>
+</html>
