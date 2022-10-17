@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 setInterval(() => {
     d = new Date();
     htime = d.getHours();
@@ -79,3 +80,6 @@ setInterval(() => {
 milisecond++;
 document.getElementById("time_taken").value=milisecond/100
 }, 10);
+=======
+
+>>>>>>> db3a7cd0d674e2aa8e81dca7852d903c54bb0cc7
